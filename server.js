@@ -1,14 +1,11 @@
-const express = require('express');
-const app = express();
+const app = require('express')();
 
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 
-app.use(express.static(__dirname + '/public'));
-
-app.get('/', (req, res) => {
+app.get('', (req, res) => {
   res.render('index');
 })
 
-app.listen(PORT, () => {
-  console.log(`App up at port ${PORT}`);
+app.listen(port, () => {
+  console.log(`App up at port ${port}`);
 });
