@@ -1,6 +1,7 @@
-import './App.css';
+import Head from 'next/head'
+import Sidebar from '../components/Sidebar.js'
 
-function App() {
+const Index = () => {
   return (
     <>
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" display="none" width="0" height="0">
@@ -17,21 +18,7 @@ function App() {
 
       <div className="flex-container" id="parent">
 
-        <nav className="flex-container" id="sidebar">
-          <div id="directory">
-            <ul>
-              <li>
-                <a href="/#">main</a>
-              </li>
-              <li>
-                <a href="/nfts">nfts</a>
-              </li>
-              <li>
-                <a href="/etc">etc</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <Sidebar />
 
         <div className="wrapper">
           <div id="main">
@@ -60,4 +47,4 @@ function App() {
   );
 }
 
-export default App;
+export default Index;
