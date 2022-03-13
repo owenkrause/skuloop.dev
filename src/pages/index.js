@@ -1,5 +1,4 @@
-import Head from 'next/head'
-import Sidebar from '../components/Sidebar.js'
+import Sidebar from '../components/Sidebar'
 
 const Index = () => {
   return (
@@ -21,6 +20,7 @@ const Index = () => {
         <Sidebar />
 
         <div className="wrapper">
+          
           <div id="main">
             <div id="inner">
               <ul className="icons">
@@ -39,6 +39,16 @@ const Index = () => {
                   </a>
                 </li>
               </ul>
+            </div>
+            <div className="scene">
+              <div className="cube">
+                <div className="cube__face cube__face--front"></div>
+                <div className="cube__face cube__face--back"></div>
+                <div className="cube__face cube__face--right"></div>
+                <div className="cube__face cube__face--left"></div>
+                <div className="cube__face cube__face--top"></div>
+                <div className="cube__face cube__face--bottom"></div>
+              </div>
             </div>
           </div>
         </div>

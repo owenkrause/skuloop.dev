@@ -1,6 +1,6 @@
 @font-face {
   font-family: VP;
-  src: url("./public/VP-Regular.otf") format("opentype")
+  src: url('../public/VP-Regular.otf') format('opentype')
 }
 body {
   background-color: white;
@@ -80,16 +80,16 @@ svg:hover {
 }
 #main {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center; 
   height: 25%;
-  width: 90%;
-  margin: 0;
+  width: 100%;
 }
 #inner {
   position: relative;
-  max-width: 100%;
-  width: 55%;
+  margin-left: 17%;
+  max-width: 300px;
+  min-width: 270px;
 }
 .icons {
   padding: 0;
@@ -115,4 +115,53 @@ svg:hover {
   position: relative;
   width: 30px;
   height: 30px;
+}
+.scene {
+  width: 200px;
+  height: 200px;
+  perspective: 400px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin linear 3.5s infinite;
+}
+
+.cube__face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+
+  line-height: 200px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  background: rgba(255, 0, 0, .5)
+}
+
+.cube__face--front { background: rgba(255, 0, 0, .5); transform: rotateY(0deg) translateZ(100px); }
+.cube__face--back { background: rgba(0, 255, 0, .5); transform: rotateY(90deg) translateZ(100px); }
+.cube__face--left { background: rgba(0, 0, 255, .5); transform: rotateY(180deg) translateZ(100px); }
+.cube__face--right { background: rgba(255, 0, 255, .5); transform: rotateY(-90deg) translateZ(100px); }
+.cube__face--top { background: rgba(255, 255, 0, .5); transform: rotateX(90deg) translateZ(100px); }
+.cube__face--bottom { background: rgba(0, 255, 255, .5); transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes spin {
+  from { transform: rotateX(0) rotateY(0); }
+  to { transform: rotateX(-360deg) rotateY(360deg); }
+}
+
+.waveButton {
+  cursor: pointer;
+  margin-top: 16px;
+  padding: 8px;
+  border: 0;
+  border-radius: 5px;
+  
 }
