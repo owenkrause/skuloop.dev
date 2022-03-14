@@ -34,6 +34,12 @@ const Web3 = () => {
       } else {
         console.log('no authorized account found')
       }
+
+      if (ethereum.chainId !== '0x4') {
+        console.log('Connect to rinkeby testnet');
+        setError('rinkeby')
+      }
+      
     } catch (error) {
       console.log(error);
     }
@@ -51,7 +57,7 @@ const Web3 = () => {
         setIsConnecting(false);
         setDisable(false);
         return;
-      }
+      } 
 
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
 
