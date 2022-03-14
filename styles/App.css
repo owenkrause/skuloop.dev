@@ -156,7 +156,7 @@ svg:hover {
 .cube__face--bottom { background: rgba(0, 255, 255, .5); transform: rotateX(-90deg) translateZ(100px); }
 
 @keyframes spin {
-  from { transform: rotateX(0deg) rotateY(0deg); }
+  from { transform: rotateX(0) rotateY(0); }
   to { transform: rotateX(-360deg) rotateY(360deg); }
 }
 
