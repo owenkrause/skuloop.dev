@@ -10,7 +10,7 @@ const Sidebar = () => {
             <Link href="/">main</Link>
           </li>
           <li>
-            <Link href="/nfts">nfts</Link>
+            <Link href="/web3">web3 </Link>
           </li>
           <li>
             <Link href="/etc">etc</Link>

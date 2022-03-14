@@ -21,8 +21,8 @@ const Index = () => {
 
         <div className="wrapper">
           
-          <div id="main">
-            <div id="inner">
+          <div className="main">
+            <div className="inner">
               <ul className="icons">
                 <li>
                   <a href="https://twitter.com/skulooper" target="_blank" rel="noreferrer">

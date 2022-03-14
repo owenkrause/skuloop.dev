@@ -78,14 +78,18 @@ svg:hover {
   align-items: center;
   justify-content: center; 
 }
-#main {
+.main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 25%;
   width: 100%;
 }
-#inner {
+.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
   margin-left: 17%;
   max-width: 300px;
@@ -137,7 +141,6 @@ svg:hover {
   position: absolute;
   width: 200px;
   height: 200px;
-
   line-height: 200px;
   text-align: center;
   font-size: 50px;
@@ -153,15 +156,79 @@ svg:hover {
 .cube__face--bottom { background: rgba(0, 255, 255, .5); transform: rotateX(-90deg) translateZ(100px); }
 
 @keyframes spin {
-  from { transform: rotateX(0) rotateY(0); }
+  from { transform: rotateX(0deg) rotateY(0deg); }
   to { transform: rotateX(-360deg) rotateY(360deg); }
 }
 
 .waveButton {
+  display: flex;
+  width: 150px;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  margin-top: 16px;
   padding: 8px;
   border: 0;
   border-radius: 5px;
-  
+  margin: 8px;
+}
+.waveButton svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  margin: .5rem;
+}
+.header {
+  font-size: 2.5rem;
+  margin-top: -.5em;
+}
+.description {
+  font-size: 1.25rem;
+  margin-top: -.25em;
+}
+#error {
+  margin: 20px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.25rem;
+  border-radius: 5px;
+  border-color: red;
+  border-width: 3px;
+  animation: fade .75s linear;
+  background-color: rgba(255,0,0,.3);
+  color: rgb(255, 72, 72);
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+.circle {
+  transform-origin: center;
+  animation: spin infinite linear 1s;
+  opacity: 25%;
+}
+
+.circle-quarter {
+  transform-origin: center;
+  animation: spin infinite linear 1s;
+  opacity: 75%;
+}
+
+.center-text {
+  transform: translate(0, .2rem)
 }
