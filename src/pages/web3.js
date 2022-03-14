@@ -9,6 +9,7 @@ const Web3 = () => {
   const [isConnecting, setIsConnecting] = useState(false);
   const [disable, setDisable] = useState(false);
   const [error, setError] = useState('');
+  const [txnsuccess, setTxnSuccess] = useState(false);
 
   const contractAddress = '0xffEd6232229ac931855332d2e8D9d46FBa6EfABD';
   const contractABI = abi.abi;
@@ -39,7 +40,7 @@ const Web3 = () => {
         console.log('Connect to rinkeby testnet');
         setError('rinkeby')
       }
-      
+
     } catch (error) {
       console.log(error);
     }
@@ -83,7 +84,6 @@ const Web3 = () => {
     setDisable(true);
     setIsConnecting(true);
     setError('');
-
     try {
       const { ethereum } = window;
 
@@ -105,7 +105,7 @@ const Web3 = () => {
         console.log('Mined -- ', waveTxn.hash);
         setDisable(false);
         setIsConnecting(false);
-
+        setTxnSuccess(true);
         count = await wavePortalContract.getTotalWaves();
         console.log('Retrieved total wave count...', count.toNumber());
       } else {
@@ -150,6 +150,7 @@ const Web3 = () => {
                   )}
                   <span className="center-text">Connect Wallet</span>
                 </button>
+                
               )}
 
               {currentAccount && chainId === '0x4' && (
@@ -162,6 +163,14 @@ const Web3 = () => {
                   )}
                   <span className="center-text">Wave</span>
                 </button>
+              )}
+
+              {txnsuccess && ( 
+                <div id='success'>
+                  <div className='description'>
+                    wave succeeded!
+                  </div>
+                </div>
               )}
 
               {(error === 'rinkeby') && (
