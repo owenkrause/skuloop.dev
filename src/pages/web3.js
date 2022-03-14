@@ -115,6 +115,10 @@ const Web3 = () => {
 
   useEffect(() => {
     checkIfWalletIsConnected();
+    try {
+      const { ethereum } = window;
+      ethereum.on('chainChanged', (_chainId) => window.location.reload());
+    } catch {}
   }, [])
 
   return (
