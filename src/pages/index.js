@@ -25,7 +25,7 @@ const Index = () => {
             <div className="inner">
               <ul className="icons">
                 <li>
-                  <a href="https://twitter.com/skulooper" target="_blank" rel="noreferrer">
+                  <a href="#" target="_blank" rel="noreferrer">
                     <svg>
                       <use xlinkHref="#twitter"></use>
                     </svg>
