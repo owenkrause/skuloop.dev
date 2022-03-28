@@ -16,7 +16,10 @@ ul {
   padding: 0;
   margin: 0;
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
 svg:hover {
   fill: grey;
 }
@@ -251,4 +254,52 @@ svg:hover {
   top: 0; 
   right: 0;
   margin: 15px;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
+  box-shadow: 2px 2px 6px rgb(175, 175, 175);
+  border-radius: 5px;
+  margin-left: -200px;
+}
+.panel .title {
+  font-size: 2rem;
+  margin-bottom: .75rem;
+}
+
+.panel .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1rem;
+  margin: .5rem;
+}
+
+.panel .checkout {
+  width: 120%;
+  margin-top: 1rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(202, 202, 202);
+  border-radius: 5px;
+}
+.panel .checkout:hover {
+  background-color:rgb(247, 247, 247);
+}
+
+.panel .checkout a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+  font-size: 1.5rem;
+}
+.panel .checkout a:hover {
+  color:grey;
 }

@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 
 const Sidebar = () => {
@@ -13,7 +12,7 @@ const Sidebar = () => {
             <Link href="/web3">web3 </Link>
           </li>
           <li>
-            <Link href="/etc">etc</Link>
+            <Link href="/brickbot">brick bot</Link>
           </li>
         </ul>
       </div>
