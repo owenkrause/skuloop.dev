@@ -242,3 +242,13 @@ svg:hover {
 .center-text {
   transform: translate(0, .2rem)
 }
+
+.top-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0; 
+  right: 0;
+  margin: 15px;
+}

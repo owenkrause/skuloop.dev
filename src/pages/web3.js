@@ -10,6 +10,7 @@ const Web3 = () => {
   const [disable, setDisable] = useState(false);
   const [error, setError] = useState('');
   const [txnsuccess, setTxnSuccess] = useState(false);
+  const [totalWaves, setTotalWaves] = useState('');
 
   const contractAddress = '0xffEd6232229ac931855332d2e8D9d46FBa6EfABD';
   const contractABI = abi.abi;
@@ -54,7 +55,7 @@ const Web3 = () => {
       const { ethereum } = window;
       
       if (!ethereum) {
-        alert('Install MetaMask!');
+        setError('metamask');
         setIsConnecting(false);
         setDisable(false);
         return;
@@ -95,8 +96,7 @@ const Web3 = () => {
         const signer = provider.getSigner();
         const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
-        let count = await wavePortalContract.getTotalWaves();
-        console.log('Retrieved total wave count...', count.toNumber());
+        console.log('Retrieved total wave count...', getWaves());
 
         const waveTxn = await wavePortalContract.wave();
         console.log('Mining...', waveTxn.hash);
@@ -106,8 +106,8 @@ const Web3 = () => {
         setDisable(false);
         setIsConnecting(false);
         setTxnSuccess(true);
-        count = await wavePortalContract.getTotalWaves();
-        console.log('Retrieved total wave count...', count.toNumber());
+
+        console.log('Retrieved total wave count...', getWaves());
       } else {
         console.log('Ethereum object does not exist!');
       }
@@ -117,6 +117,10 @@ const Web3 = () => {
       setIsConnecting(false);
       setDisable(false);
     }
+  }
+
+  const getWaves = async () => {
+    return totalWaves;
   }
 
   useEffect(() => {
@@ -130,7 +134,8 @@ const Web3 = () => {
   return (
     <>
       <div className='flex-container' id='parent'>
-      
+
+        <div className="top-right">test{totalWaves}</div>
         <Sidebar />
    
         <div className='wrapper'>
@@ -172,7 +177,13 @@ const Web3 = () => {
                   </div>
                 </div>
               )}
-
+              {(error === 'metamask') && (
+                <div id='error'>
+                  <div className='description'>
+                    install metamask
+                  </div>
+                </div>
+              )}
               {(error === 'rinkeby') && (
                 <div id='error'>
                   <div className='description'>
