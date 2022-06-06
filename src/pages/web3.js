@@ -1,4 +1,4 @@
-import Sidebar from './components/sidebar'
+import Sidebar from '../components/Sidebar'
 import React, { useEffect, useState } from 'react'
 import { ethers } from 'ethers';
 import abi from '/src/utils/WavePortal.json'
@@ -204,4 +204,4 @@ const Web3 = () => {
     </>
   )
 }
-export default Web3;
+export default Web3

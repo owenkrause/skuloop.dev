@@ -1,4 +1,4 @@
-import Sidebar from './components/sidebar';
+import Sidebar from '../components/Sidebar';
 
 const Goals = () => {
 
@@ -14,4 +14,4 @@ const Goals = () => {
   )
 }
 
-export default Goals;
+export default Goals

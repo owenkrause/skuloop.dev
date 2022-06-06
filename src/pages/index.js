@@ -1,4 +1,4 @@
-import Sidebar from './components/sidebar'
+import Sidebar from '../components/Sidebar'
 
 const Index = () => {
   return (
@@ -46,4 +46,4 @@ const Index = () => {
   );
 }
 
-export default Index;
+export default Index
