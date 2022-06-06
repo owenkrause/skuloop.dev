@@ -1,4 +1,4 @@
-import Sidebar from '../components/sidebar'
+import Sidebar from './components/sidebar'
 import React, { useEffect, useState } from 'react'
 import { ethers } from 'ethers';
 import abi from '/src/utils/WavePortal.json'
