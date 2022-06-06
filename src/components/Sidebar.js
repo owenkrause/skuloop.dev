@@ -5,15 +5,9 @@ const Sidebar = () => {
     <nav className="flex-container" id="sidebar">
       <div id="directory">
         <ul>
-          <li>
-            <Link href="/">main</Link>
-          </li>
-          <li>
-            <Link href="/web3">web3 </Link>
-          </li>
-          <li>
-            <Link href="/brickbot">brick bot</Link>
-          </li>
+          <li><Link href="/">main</Link></li>
+          <li><Link href="/goals">goals</Link></li>
+          <li><Link href="/web3">web3</Link></li>
         </ul>
       </div>
     </nav>

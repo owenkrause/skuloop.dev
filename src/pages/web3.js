@@ -1,4 +1,4 @@
-import Sidebar from '../components/Sidebar'
+import Sidebar from '../components/sidebar'
 import React, { useEffect, useState } from 'react'
 import { ethers } from 'ethers';
 import abi from '/src/utils/WavePortal.json'
@@ -135,7 +135,6 @@ const Web3 = () => {
     <>
       <div className='flex-container' id='parent'>
 
-        <div className="top-right">test{totalWaves}</div>
         <Sidebar />
    
         <div className='wrapper'>
