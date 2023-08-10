@@ -9,15 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        'gray-100': '#F5F5F5',
         'gray-200': '#EEEEEE',
+        'gray-400': '#BDBDBD',
         'gray-800': '#424242'
       },
       keyframes: {
         width: {
           '25%': { width: '0px' },
-          '40%': { width: '100px' },
-          '50%': { width: '100px' },
-          '70%': { width: '130px' },
           '100%': { width: '324px' }
         }
       }

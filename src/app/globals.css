@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  @font-face {
+    font-family: VP-Pixel;
+    src: url('../../public/VPPixel-Simplified.otf')
+  }
+  html {
+    font-family: VP-Pixel;
+    color: #424242
+  }
+}
+
 @layer utilities {
   .loadingBarLeft {
     box-shadow: 0 .25rem 0 #424242, 0 -.25rem 0 #424242, -.25rem 0 0 #424242
@@ -9,4 +21,16 @@
   .loadingBarRight {
     box-shadow: 0 .25rem 0 #424242, 0 -.25rem 0 #424242, .25rem 0 0 #424242
   }
+  ::-webkit-scrollbar {
+    display: none
+  }
+  .scrollIcon {
+    background: url('../../public/scrollThumb.svg') no-repeat -8px 50%,
+        url('../../public/scrollThumb.svg') repeat-x -98px -14px,
+        url('../../public/scrollThumb.svg') repeat-x -113px 100%,
+        url('../../public/scrollThumb.svg') -23px;
+    width: 1rem;
+    height: 2.5rem
+  }
+
 }
