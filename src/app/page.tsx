@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
 
@@ -12,7 +12,6 @@ export default function Home() {
   }, [])
 
   const [scrollY, setScrollY] = useState(0)
-
   const handleScroll = (event: React.UIEvent<HTMLDivElement, UIEvent>) => {
     setScrollY((event.target as HTMLElement).scrollTop)
   }
@@ -63,20 +62,7 @@ export default function Home() {
             )}
           </div>
         </div>
-        
       </div>
     </div>
   )
 }
-
-
-/*
-0 -> 0%
-
-212.5 -> 50%
-
-425 -> 100%
-
-(scroll / 425) * 425
-
-*/

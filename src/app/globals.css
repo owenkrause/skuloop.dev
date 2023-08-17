@@ -21,9 +21,9 @@
   .loadingBarRight {
     box-shadow: 0 .25rem 0 #424242, 0 -.25rem 0 #424242, .25rem 0 0 #424242
   }
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
     display: none
-  }
+  } */
   .scrollIcon {
     background: url('../../public/scrollThumb.svg') no-repeat -8px 50%,
         url('../../public/scrollThumb.svg') repeat-x -98px -14px,
